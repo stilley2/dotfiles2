@@ -1,8 +1,8 @@
 "Plugins
-call plug#begin('~/.vim/plugged')
-"Plug 'https://github.com/neomake/neomake.git'
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'https://github.com/neomake/neomake.git'
 Plug 'https://github.com/altercation/vim-colors-solarized.git'
-"Plug 'https://github.com/BurningEther/iron.nvim'
+Plug 'https://github.com/BurningEther/iron.nvim'
 Plug 'davidhalter/jedi-vim',
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'https://github.com/davidhalter/jedi-vim.git'
@@ -22,7 +22,7 @@ filetype indent plugin on
 set nu
 " https://pythonadventures.wordpress.com/tag/neomake/
 set grepprg=grep\ -nH\ $*
-" tnoremap <Esc> <C-\><C-n>
+tnoremap <Esc> <C-\><C-n>
 set scrolloff=10
 set guicursor=
 set nojoinspaces
@@ -34,17 +34,17 @@ let mapleader = " "
 map <leader>n :tabn<CR>
 map <leader>p :tabp<CR>
 
-" let g:neomake_python_enabled_makers = ['flake8']
-" let g:neomake_python_flake8_maker = { 'args': ['--ignore=E501'], }
-" let g:neomake_cpp_gcc_maker = {'args': ['--std=c++11']}
-" call neomake#configure#automake('w')
+let g:neomake_python_enabled_makers = ['flake8']
+let g:neomake_python_flake8_maker = { 'args': ['--ignore=E501'], }
+let g:neomake_cpp_gcc_maker = {'args': ['--std=c++11']}
+call neomake#configure#automake('w')
 
 let g:jedi#usages_command = "<leader>j"
+let g:jedi#smart_auto_mappings = 0
 
 autocmd BufNewFile,BufRead *.md setlocal ft=markdown
 autocmd FileType markdown setlocal tw=80 spell spelllang=en_us
 autocmd FileType tex setlocal spell spelllang=en_us
-autocmd FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " let g:deoplete#enable_at_startup = 1
 " let g:deoplete#disable_auto_complete = 0
