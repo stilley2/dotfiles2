@@ -1,1 +1,4 @@
-/home/stilley2/.dotfiles/.screenrc
+hardstatus alwayslastline '%w'
+maptimeout 5
+# http://vim.wikia.com/wiki/GNU_Screen_integration
+term screen-256color
