@@ -35,7 +35,7 @@ map <leader>n :tabn<CR>
 map <leader>p :tabp<CR>
 
 let g:neomake_python_enabled_makers = ['flake8']
-let g:neomake_python_flake8_maker = { 'args': ['--ignore=E501'], }
+let g:neomake_python_flake8_maker = { 'args': ['--ignore=E501,E741'], }
 let g:neomake_cpp_gcc_maker = {'args': ['--std=c++11']}
 call neomake#configure#automake('w')
 

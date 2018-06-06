@@ -10,6 +10,7 @@ general {
         colors = true
 }
 
+order += "tartarus"
 order += "marcc"
 order += "ipv6"
 order += "disk /"
