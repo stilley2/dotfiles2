@@ -9,4 +9,4 @@ class Py3status:
             data = data.decode().strip()
         except subprocess.SubprocessError:
             data = 'MARCC not connected'
-        return {'full_text': data, 'cached_until': 60}
+        return {'full_text': data}

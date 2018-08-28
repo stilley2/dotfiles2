@@ -4,6 +4,7 @@ Plug 'https://github.com/neomake/neomake.git'
 Plug 'https://github.com/altercation/vim-colors-solarized.git'
 Plug 'https://github.com/BurningEther/iron.nvim'
 Plug 'davidhalter/jedi-vim',
+Plug 'JuliaEditorSupport/julia-vim'
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'https://github.com/davidhalter/jedi-vim.git'
 " Plug 'https://github.com/zchee/deoplete-jedi.git'
@@ -43,7 +44,9 @@ let g:jedi#usages_command = "<leader>j"
 let g:jedi#smart_auto_mappings = 0
 
 autocmd BufNewFile,BufRead *.md setlocal ft=markdown
+autocmd BufNewFile,BufRead *.jl setlocal ft=julia
 autocmd FileType markdown setlocal tw=80 spell spelllang=en_us
+autocmd FileType tex setlocal spell spelllang=en_us
 autocmd FileType tex setlocal spell spelllang=en_us
 
 " let g:deoplete#enable_at_startup = 1
