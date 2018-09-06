@@ -49,3 +49,9 @@
       python-shell-prompt-detect-failure-warning nil)
 (add-to-list 'python-shell-completion-native-disabled-interpreters
 	     "jupyter")
+;; https://emacs.stackexchange.com/questions/22241/show-only-file-names-starting-with-the-given-string-in-emacs-history
+;; http://ergoemacs.org/emacs/reclaim_keybindings.html
+(define-key minibuffer-local-completion-map (kbd "M-p") 'previous-complete-history-element)
+(define-key minibuffer-local-completion-map (kbd "M-n") 'next-complete-history-element)
+(define-key comint-mode-map (kbd "M-p") 'previous-complete-history-element)
+(define-key comint-mode-map (kbd "M-n") 'next-complete-history-element)
