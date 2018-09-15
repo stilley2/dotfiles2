@@ -16,7 +16,9 @@
  '(custom-enabled-themes (quote (manoj-dark)))
  '(elpy-test-runner (quote elpy-test-pytest-runner))
  '(org-agenda-files (quote ("~/thesis/notes.org")))
- '(package-selected-packages (quote (conda org-ref evil-org evil auctex ein elpy)))
+ '(package-selected-packages
+   (quote
+    (cuda-mode conda org-ref evil-org evil auctex ein elpy)))
  '(python-flymake-command (quote ("flake8")))
  '(savehist-mode t))
 (custom-set-faces
@@ -30,6 +32,7 @@
 
 (require 'evil)
 (evil-mode 1)
+(evil-set-initial-state 'shell-mode 'emacs)
 ;;(require 'evil-org)
 ;;(evil-org-set-key-theme '(textobjects insert navigation additional shift todo heading))
 (require 'org-ref)
@@ -53,5 +56,3 @@
 ;; http://ergoemacs.org/emacs/reclaim_keybindings.html
 (define-key minibuffer-local-completion-map (kbd "M-p") 'previous-complete-history-element)
 (define-key minibuffer-local-completion-map (kbd "M-n") 'next-complete-history-element)
-(define-key comint-mode-map (kbd "M-p") 'previous-complete-history-element)
-(define-key comint-mode-map (kbd "M-n") 'next-complete-history-element)
