@@ -2,8 +2,8 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'https://github.com/neomake/neomake.git'
 Plug 'https://github.com/altercation/vim-colors-solarized.git'
-Plug 'https://github.com/BurningEther/iron.nvim'
-Plug 'davidhalter/jedi-vim',
+" Plug 'https://github.com/BurningEther/iron.nvim'
+" Plug 'davidhalter/jedi-vim',
 Plug 'JuliaEditorSupport/julia-vim'
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'https://github.com/davidhalter/jedi-vim.git'
@@ -28,6 +28,7 @@ set scrolloff=10
 set guicursor=
 set nojoinspaces
 set hidden
+set wildmode=list:longest,full
 
 "https://stackoverflow.com/questions/446269/can-i-use-space-as-mapleader-in-vim
 noremap <space> <Nop>
